@@ -1,0 +1,1331 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+li,
+dt,
+dd {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+
+html {
+    font-size: calc(100vw/7.2);
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+//淡出动画
+@keyframes one {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+//背景下移
+@keyframes xiay {
+    0% {
+        background-position: 0 bottom;
+    }
+
+    100% {
+        background-position: 0 top;
+    }
+}
+
+//柱子向下移动动画
+@keyframes firstz {
+    0% {
+        transform: translateY(0rem);
+    }
+
+    100% {
+        transform: translateY(50rem);
+    }
+}
+
+//升天柱子向上移动动画
+@keyframes stz {
+    0% {
+        transform: translateY(0rem);
+    }
+
+    20% {
+        transform: translateY(.3rem);
+    }
+
+    100% {
+        transform: translateY(-2.3rem);
+    }
+}
+
+.stz {
+    animation: stz 3000ms linear forwards;
+}
+
+//鸽子向上移动动画
+@keyframes stg {
+    0% {
+        transform: translateY(-3rem);
+    }
+
+    20% {
+        transform: translateY(-2.7rem);
+    }
+
+    100% {
+        transform: translateY(-5.1rem);
+    }
+}
+
+// 三球的动画
+@keyframes q1 {
+    0% {
+        transform: translateX(-3rem) rotate(180deg);
+    }
+
+    100% {
+        transform: translateX(0) rotate(360deg);
+    }
+}
+
+@keyframes q3 {
+    0% {
+        opacity: 0.1;
+        transform: scale(0.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes q4 {
+    0% {
+        transform: translateX(3rem) rotate(180deg);
+    }
+
+    100% {
+        transform: translateX(0) rotate(0deg);
+    }
+}
+
+@keyframes q2 {
+    0% {
+        transform: translateY(0.2rem);
+    }
+
+    100% {
+        transform: translateY(-0.2rem);
+    }
+}
+
+//鸽子
+.gz1 {
+    width: .7rem;
+    height: 1rem;
+    position: absolute;
+    bottom: .18rem;
+    left: 3.26rem;
+    z-index: 99;
+}
+
+.gg {
+    animation: gg 2000ms linear;
+
+}
+
+//鸽子移动类名
+.move1 {
+    animation:
+        gg1 2000ms linear,
+        gg2 1320ms 2000ms linear,
+        gg3 2619ms 3320ms linear,
+        gg4 1845ms 5939ms linear forwards;
+}
+
+.move2 {
+    animation:
+        gg5 610ms linear,
+        gg6 3934ms 610ms linear forwards;
+}
+
+.move3 {
+    animation:
+        gg7 1670ms linear,
+        gg8 1228ms 1670ms linear,
+        gg9 2108ms 2898ms linear forwards;
+}
+
+.move4 {
+    animation:
+        gg10 2293ms linear,
+        gg11 1219ms 2293ms linear forwards;
+}
+
+//鸽子升天类名
+.stg {
+    animation: stg 3000ms linear forwards;
+}
+
+//html代码
+.container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+
+    .bg {
+        width: 100%;
+        height: 100%;
+        background-image: url(../img/bg.jpg);
+        background-size: cover;
+        background-position: 0 bottom;
+
+
+        .top {
+            width: 7.2rem;
+            height: 4.65rem;
+            position: absolute;
+            top: 0.41rem;
+            // bottom: 6.536rem;
+        }
+
+        .tow {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            pointer-events: none;
+        }
+
+        //第一部分淡出动画
+        .tow,
+        .top,
+        .five,
+        .four,
+        .six,
+        .seven,
+        .one {
+            animation: one 2000ms linear;
+        }
+
+        //升天所有柱子下移添加的动画类名
+        .firstxy {
+            animation: firstz 3000ms linear forwards;
+        }
+
+        .three {
+            animation: one 3500ms linear;
+        }
+
+
+
+        .text {
+
+            .hx1 {
+                width: 1rem;
+                height: 0.01rem;
+                background: #ffffff83;
+                position: absolute;
+                top: 1.6rem;
+                left: 1.3rem;
+            }
+
+            .sz {
+                font-size: 0.4rem;
+                color: #ffffff83;
+                position: absolute;
+                top: 1.41rem;
+                left: 2.81rem;
+                letter-spacing: 0.24rem;
+            }
+
+            .hx2 {
+                width: 1rem;
+                height: 0.01rem;
+                background: #ffffff83;
+                position: absolute;
+                top: 1.6rem;
+                right: 1.3rem;
+            }
+
+            .text1 {
+                font-size: 1.2rem;
+                font-weight: 100;
+                color: #fff;
+                position: absolute;
+                top: 2.08rem;
+                left: 1.2rem;
+            }
+        }
+
+        .text2 {
+            font-size: .4rem;
+            color: #0891887f;
+            position: absolute;
+            bottom: 4.9rem;
+            left: 2.48rem;
+            z-index: 2;
+        }
+
+        .arrow {
+            position: absolute;
+            bottom: 2.85rem;
+            left: 3.36rem;
+            z-index: 8;
+
+            .jiantou {
+                width: 0.64rem;
+                height: 0.33rem;
+                opacity: 0;
+                margin-top: .04rem;
+            }
+        }
+
+        .cycle {
+            animation: jiantou 2700ms infinite;
+            animation-direction: reverse;
+        }
+
+        @keyframes jiantou {
+            0% {
+                opacity: 0.5
+            }
+
+            30% {
+                opacity: 1
+            }
+
+            60% {
+                opacity: 0.5
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .mountain {
+            width: 7.2rem;
+            height: 1.31rem;
+            position: absolute;
+            bottom: 6.63rem;
+        }
+
+        .cloud1 {
+            width: 7.2rem;
+            height: 4.8rem;
+            position: absolute;
+            bottom: 2.901rem;
+            z-index: 1;
+        }
+
+        .cloud2 {
+            width: 7.2rem;
+            height: 5.74rem;
+            position: absolute;
+            bottom: -.03rem;
+            z-index: 7;
+        }
+
+        .cloud3 {
+            width: 7.2rem;
+            height: 2.4rem;
+            position: absolute;
+            bottom: -.12rem;
+            z-index: 31;
+        }
+
+
+
+        .z01 {
+            width: 2rem;
+            height: .58rem;
+            position: absolute;
+            bottom: 0;
+            left: 2.62rem;
+            z-index: 35;
+            animation: gg 2000ms linear;
+        }
+
+
+        //z09-z15-z30 z12激活柱
+        .jihuo1 {
+            left: 1.5rem;
+            bottom: 4.08rem;
+        }
+
+        .jihuo2 {
+            left: 4rem;
+            bottom: 6rem;
+        }
+
+        .jihuo3 {
+            left: 5.6rem;
+            bottom: 3.45rem;
+        }
+
+        //第二，三部分代码
+        .yincang {
+            display: none;
+
+
+            .seven {
+                display: none;
+            }
+
+            // 分享账单 领取奖品按钮
+            .but1 {
+                padding: .1rem .36rem;
+                border: 0.01rem solid #fff;
+                border-radius: 1rem;
+                color: #fff;
+                font-size: .26rem;
+                position: absolute;
+                bottom: 1rem;
+                left: 0.7rem;
+            }
+
+            .but2 {
+                padding: .1rem .36rem;
+                border: 0.01rem solid #fff;
+                border-radius: 1rem;
+                color: #fff;
+                font-size: .26rem;
+                position: absolute;
+                bottom: 1rem;
+                right: 0.7rem;
+            }
+
+            // 第三部分球
+            .t1 {
+                position: absolute;
+                top: 6.695rem;
+                left: .4rem;
+                transform: translateX(-3rem) rotate(180deg);
+                animation: q1 2000ms linear forwards;
+
+                .ji1 {
+                    width: .7rem;
+                    height: 1rem;
+                    position: absolute;
+                    left: .48rem;
+                    bottom: 1.14rem;
+                }
+
+                .qui1 {
+                    width: 1.65rem;
+                    height: 1.64rem;
+                }
+
+                span {
+                    padding: .05rem .16rem;
+                    position: absolute;
+                    top: .98rem;
+                    left: -.15rem;
+                    font-size: .24rem;
+                    color: #fff;
+                    border: .03rem solid #cccccc75;
+                    border-radius: .12rem;
+                    background: #0000004e;
+                }
+            }
+
+            .t2 {
+                position: absolute;
+                top: 4.935rem;
+                left: 2.52rem;
+                animation: q3 2000ms linear forwards;
+
+                .ji2 {
+                    width: .7rem;
+                    height: 1rem;
+                    position: absolute;
+                    left: .74rem;
+                    bottom: 1.48rem;
+                }
+
+                .qui2 {
+                    width: 2.1rem;
+                    height: 2.08rem;
+                }
+
+                span {
+                    padding: .05rem .16rem;
+                    position: absolute;
+                    top: 1rem;
+                    left: .1rem;
+                    font-size: .24rem;
+                    color: #fff;
+                    border: .03rem solid #cccccc75;
+                    border-radius: .12rem;
+                    background: #0000004e;
+                }
+            }
+
+            .t3 {
+                position: absolute;
+                right: .4rem;
+                top: 6.1rem;
+                transform: translateX(3rem) rotate(180deg);
+                animation: q4 2000ms linear forwards;
+
+
+                .ji3 {
+                    width: .7rem;
+                    height: 1rem;
+                    position: absolute;
+                    left: .56rem;
+                    bottom: 1.27rem;
+                }
+
+                .qui3 {
+                    width: 1.82rem;
+                    height: 1.82rem;
+                }
+
+                span {
+                    padding: .05rem .16rem;
+                    position: absolute;
+                    top: 1.06rem;
+                    font-size: .24rem;
+                    color: #fff;
+                    border: .03rem solid #cccccc75;
+                    border-radius: .12rem;
+                    background: #0000004e;
+                }
+
+            }
+
+            .q {
+                animation: q2 2000ms linear infinite alternate-reverse;
+            }
+
+            //第三部分文字
+            .wz11 {
+                color: #fff;
+                font-size: .3rem;
+                position: absolute;
+                top: .92rem;
+                left: 1.13rem;
+
+                span {
+                    font-size: .5rem;
+                }
+            }
+
+            .wz12 {
+                color: #fff;
+                font-size: .26rem;
+                position: absolute;
+                top: 2.578rem;
+                left: 1.1rem;
+            }
+
+            .return {
+                padding: .1rem .26rem;
+                border: 0.01rem solid #fff;
+                border-radius: 1rem;
+                color: #fff;
+                font-size: .26rem;
+                position: absolute;
+                top: .83rem;
+                right: .6rem;
+
+                img {
+                    display: inline-block;
+                    width: 0.18rem;
+                    height: 0.2rem;
+                    padding-right: .2rem;
+                }
+            }
+
+
+            .first {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+            }
+
+            // 切换的文字
+            .three {
+                .wz1 {
+                    font-size: 0.3rem;
+                    color: #ffffffcb;
+                    width: 7.2rem;
+                    height: .528rem;
+                    position: absolute;
+                    top: 1.22rem;
+                    // bottom: 9.8rem;
+                    left: 1.4rem;
+
+                    span {
+                        font-size: 0.4rem;
+                    }
+                }
+
+                .phone {
+                    width: .76rem;
+                    height: .76rem;
+                    position: absolute;
+                    top: 1.94rem;
+                    // bottom: 8.8rem;
+                    left: 1.96rem;
+                }
+
+                .wz2 {
+                    font-size: 0.24rem;
+                    color: #ffffffcb;
+                    width: 2.4rem;
+                    height: 0.96rem;
+                    position: absolute;
+                    top: 1.85rem;
+                    // bottom: 8.694rem;
+                    left: 3.17rem;
+                }
+
+                .wz3 {
+                    font-size: 0.2rem;
+                    color: #ffffffcb;
+                    position: absolute;
+                    top: 3.31rem;
+                    // bottom: 8.214rem;
+                    left: 3.6rem;
+                }
+            }
+
+            .four {
+                display: none;
+
+                .telewifi1 {
+                    color: #fff;
+                    width: .76rem;
+                    height: .76rem;
+                    position: absolute;
+                    top: 1.46rem;
+                    left: 1.13rem;
+                }
+
+                .wz4 {
+                    font-size: 0.35rem;
+                    color: #fff;
+                    width: 7.2rem;
+                    height: .528rem;
+                    position: absolute;
+                    top: 1.4rem;
+                    // bottom: 9.8rem;
+                    left: 2rem;
+                }
+
+                .wz5 {
+                    font-size: 0.28rem;
+                    color: #ffffffcb;
+                    position: absolute;
+                    top: 2.6rem;
+                    left: 1.2rem;
+                }
+            }
+
+            .five {
+                display: none;
+
+                .telewifi2 {
+                    color: #fff;
+                    width: .76rem;
+                    height: .76rem;
+                    position: absolute;
+                    top: 1.46rem;
+                    left: 1.13rem;
+                }
+
+                .wz6 {
+                    font-size: 0.35rem;
+                    color: #fff;
+                    width: 7.2rem;
+                    height: .528rem;
+                    position: absolute;
+                    top: 1.4rem;
+                    // bottom: 9.8rem;
+                    left: 2rem;
+                }
+
+                .wz7 {
+                    text-align: center;
+                    font-size: 0.28rem;
+                    color: #ffffffcb;
+                    position: absolute;
+                    top: 2.6rem;
+                    left: 1.1rem;
+                }
+            }
+
+            .six {
+                display: none;
+
+                .wz8 {
+                    font-size: 0.35rem;
+                    color: #fff;
+                    position: absolute;
+                    top: 1.2rem;
+                    left: 1.23rem;
+                }
+
+                .wz9 {
+                    text-align: center;
+                    font-size: 0.28rem;
+                    color: #ffffffcb;
+                    position: absolute;
+                    top: 2.8rem;
+                    left: 1.22rem;
+                }
+            }
+
+            //气泡和光圈
+            // .qp1 {
+            //     font-size: 0.24rem;
+            //     width: 1.86rem;
+            //     height: 1.18rem;
+            //     box-sizing: border-box;
+            //     padding: 0.1rem 0.15rem;
+            //     background: url(../img/qp.png) no-repeat;
+            //     background-size: 100%;
+            //     position: absolute;
+            //     left: calc(50% - -0.2rem);
+            //     bottom: 0.6rem;
+            //     z-index: 99;
+            //     display: none;
+            // }
+
+            .gq1 {
+                width: .6rem;
+                height: .6rem;
+                border: .05rem solid #fff;
+                border-radius: 50%;
+                position: absolute;
+                bottom: 3.82rem;
+                left: 1.54rem;
+                z-index: 98;
+                display: none;
+            }
+
+            .gq2 {
+                width: .6rem;
+                height: .6rem;
+                border: .05rem solid #fff;
+                border-radius: 50%;
+                position: absolute;
+                left: 4rem;
+                bottom: 5.82rem;
+                z-index: 98;
+                display: none;
+            }
+
+            .gq3 {
+                width: .6rem;
+                height: .6rem;
+                border: .05rem solid #fff;
+                border-radius: 50%;
+                position: absolute;
+                left: 5.5rem;
+                bottom: 3.28rem;
+                z-index: 98;
+                display: none;
+            }
+
+            .gq4 {
+                width: .6rem;
+                height: .6rem;
+                border: .05rem solid #fff;
+                border-radius: 50%;
+                position: absolute;
+                left: 3.3rem;
+                bottom: 2.83rem;
+                z-index: 98;
+                display: none;
+            }
+
+            //光圈动画
+            .gqeffect {
+                animation: gq 1000ms linear alternate-reverse infinite;
+            }
+
+
+            //柱子
+            .z31 {
+                width: 2.5rem;
+                height: 5.71rem;
+                position: absolute;
+                bottom: 2.076rem;
+                left: 1.096rem;
+                z-index: 5;
+                --animate-duration: 3s;
+            }
+
+            .z34 {
+                width: 1.5rem;
+                height: 6.34rem;
+                position: absolute;
+                bottom: 1.504rem;
+                right: 0.12rem;
+                z-index: 2;
+                --animate-duration: 3.2s;
+            }
+
+            .z14 {
+                width: 1rem;
+                height: 3.2rem;
+                position: absolute;
+                bottom: -.456rem;
+                right: -.4rem;
+                z-index: 22;
+                --animate-duration: 3.3s;
+            }
+
+            .z18-1 {
+                width: 1.63rem;
+                height: 4.61rem;
+                position: absolute;
+                bottom: .61rem;
+                left: 2.16rem;
+                z-index: 18;
+                --animate-duration: 3.4s;
+            }
+
+
+
+            .z33 {
+                width: 1rem;
+                height: 3.46rem;
+                position: absolute;
+                bottom: 3.57rem;
+                right: 1.848rem;
+                z-index: 3;
+            }
+
+            .z32 {
+                width: .82rem;
+                height: .73rem;
+                position: absolute;
+                bottom: 6.89rem;
+                right: 1.93rem;
+                z-index: 4;
+            }
+
+
+            .z15 {
+                width: 1rem;
+                height: 3.75rem;
+                position: absolute;
+                bottom: 2.7rem;
+                right: 2.3438rem;
+                z-index: 6;
+            }
+
+
+
+            .z28 {
+                width: 1rem;
+                height: 1.45rem;
+                position: absolute;
+                bottom: 4.73rem;
+                right: 1.848rem;
+                z-index: 8;
+            }
+
+            .z26 {
+                width: 1.26rem;
+                height: 3.45rem;
+                position: absolute;
+                bottom: 2.717rem;
+                right: 2.8362rem;
+                z-index: 9;
+            }
+
+            .z25 {
+                width: 1.26rem;
+                height: 3.45rem;
+                position: absolute;
+                bottom: 2.29rem;
+                left: 2.37rem;
+                z-index: 10;
+            }
+
+            .z19 {
+                width: 1.26rem;
+                height: 3.45rem;
+                position: absolute;
+                bottom: 1.87rem;
+                left: 1.6368rem;
+                z-index: 11;
+            }
+
+            .z24 {
+                width: 2rem;
+                height: 5.34rem;
+                position: absolute;
+                bottom: -0.01rem;
+                right: 1.348rem;
+                z-index: 12;
+            }
+
+            .z22 {
+                width: 1rem;
+                height: 4.04rem;
+                position: absolute;
+                bottom: 0.4314rem;
+                right: 1.854rem;
+                z-index: 13;
+            }
+
+            .z23 {
+                width: 1rem;
+                height: 4.04rem;
+                position: absolute;
+                bottom: 0.146rem;
+                right: 1.35rem;
+                z-index: 14;
+            }
+
+            .z21 {
+                width: 1rem;
+                height: 3.46rem;
+                position: absolute;
+                bottom: 1.87rem;
+                left: .416rem;
+                z-index: 15;
+            }
+
+            .z20 {
+                width: .68rem;
+                height: .66rem;
+                position: absolute;
+                bottom: 5.29rem;
+                left: .6rem;
+                z-index: 16;
+            }
+
+            //给电话添加动画类名
+            .dh {
+                animation: dh 1000ms linear alternate-reverse infinite;
+            }
+
+            .z11-19 {
+                width: 1.26rem;
+                height: 3.45rem;
+                position: absolute;
+                bottom: 1.446rem;
+                left: .90334rem;
+                z-index: 17;
+            }
+
+
+
+            .z17 {
+                width: 1.26rem;
+                height: 4.21rem;
+                position: absolute;
+                bottom: .2666rem;
+                right: .1rem;
+                z-index: 19;
+            }
+
+            .z16 {
+                width: .6rem;
+                height: .84rem;
+                position: absolute;
+                bottom: 4.26rem;
+                right: .5266rem;
+                z-index: 20;
+            }
+
+            .z30 {
+                width: 1rem;
+                height: 3.75rem;
+                position: absolute;
+                bottom: .148rem;
+                right: .85016rem;
+                z-index: 21;
+            }
+
+            .z13 {
+                width: .76rem;
+                height: .8rem;
+                position: absolute;
+                bottom: 2.83rem;
+                right: 1.34rem;
+                z-index: 23;
+            }
+
+            .z12 {
+                width: 1rem;
+                height: 5.27rem;
+                position: absolute;
+                bottom: -1.814rem;
+                right: 3.07rem;
+                z-index: 24;
+            }
+
+            .z11 {
+                width: 1.26rem;
+                height: 3.45rem;
+                position: absolute;
+                bottom: -.266rem;
+                right: 1.588rem;
+                z-index: 25;
+
+            }
+
+            .z10 {
+                width: 1.26rem;
+                height: 3.02rem;
+                position: absolute;
+                bottom: .172rem;
+                right: 2.32rem;
+                z-index: 26;
+            }
+
+            .z09 {
+                width: 1rem;
+                height: 3.75rem;
+                position: absolute;
+                bottom: .701rem;
+                left: 1.399rem;
+                z-index: 27;
+                --animate-duration: 7.5s;
+                --animate-delay: 0.9s;
+            }
+
+            .z08 {
+                width: 1rem;
+                height: 4.21rem;
+                position: absolute;
+                bottom: -.05rem;
+                left: .89668rem;
+                z-index: 28;
+                --animate-duration: 7.2s;
+                --animate-delay: 0.9s;
+            }
+
+            .z07 {
+                width: 1.76rem;
+                height: 3.02rem;
+                position: absolute;
+                bottom: .41rem;
+                left: .16rem;
+                z-index: 29;
+                --animate-duration: 7s;
+                --animate-delay: 0.9s;
+            }
+
+            .z06 {
+                width: 1.76rem;
+                height: 3.02rem;
+                position: absolute;
+                bottom: -.308rem;
+                left: 1.39rem;
+                z-index: 30;
+                --animate-duration: 6.3s;
+                --animate-delay: 0.9s;
+            }
+
+
+
+            .z04 {
+                width: 2rem;
+                height: 5.34rem;
+                position: absolute;
+                bottom: -3.338rem;
+                left: 1.63rem;
+                z-index: 32;
+                --animate-duration: 5.3s;
+                --animate-delay: 0.9s;
+            }
+
+            .z03 {
+                width: 1rem;
+                height: 4.04rem;
+                position: absolute;
+                bottom: -2.89rem;
+                left: 2.129rem;
+                z-index: 33;
+                --animate-duration: 4.5s;
+                --animate-delay: 0.9s;
+            }
+
+            .z02 {
+                width: 1rem;
+                height: 4.04rem;
+                position: absolute;
+                bottom: -3.18rem;
+                left: 2.63rem;
+                z-index: 34;
+                --animate-duration: 4s;
+                --animate-delay: 0.9s;
+            }
+        }
+    }
+
+    .shengt {
+        animation: xiay 3000ms linear forwards;
+    }
+}
+
+
+
+
+
+//电话
+@keyframes dh {
+    0% {
+        transform: translateY(.1rem);
+    }
+
+    100% {
+        transform: translateY(-.1rem);
+    }
+}
+
+//光圈
+@keyframes gq {
+    0% {
+        transform: scale(0.1);
+    }
+
+    100% {
+        transform: scale(1.4);
+    }
+}
+
+//gg上升 
+@keyframes gg {
+    0% {
+        transform: translateY(2rem);
+    }
+
+    100% {
+        transform: translateY(0rem);
+    }
+}
+
+//柱子动画
+.remove {
+    animation: pillar 2000ms linear forwards;
+}
+
+.child {
+    transform: translateY(8rem);
+}
+
+@keyframes pillar {
+    0% {
+        transform: translateY(8rem);
+    }
+
+    80% {
+        transform: translateY(-.5rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+//电话柱子z21-金币柱子z17
+.remove1 {
+    animation: columns 2000ms linear forwards;
+}
+
+.column {
+    transform: translateY(8rem);
+}
+
+@keyframes columns {
+    0% {
+        transform: translateY(8rem);
+    }
+
+    80% {
+        transform: translateY(-.5rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+//风车动画
+@keyframes xuanzhuan {
+    0% {
+        bottom: -5.5rem;
+        left: 2.16rem;
+    }
+
+    100% {
+        left: 2.16rem;
+        bottom: .61rem;
+    }
+}
+
+// 小鸡移动动画
+@keyframes gg1 {
+    from {
+        bottom: 0.18rem;
+        left: 3.26rem;
+    }
+
+    to {
+        left: 1.75rem;
+        bottom: 1rem;
+    }
+}
+
+@keyframes gg2 {
+    from {
+        left: 1.75rem;
+        bottom: 1rem;
+    }
+
+    to {
+        left: 2.7rem;
+        bottom: 1.62rem;
+    }
+}
+
+@keyframes gg3 {
+    from {
+        left: 2.7rem;
+        bottom: 1.62rem;
+    }
+
+    to {
+        left: 0.5rem;
+        bottom: 2.85rem;
+    }
+}
+
+@keyframes gg4 {
+    from {
+        left: 0.5rem;
+        bottom: 2.85rem;
+    }
+
+    to {
+        left: 1.5rem;
+        bottom: 4.08rem;
+    }
+}
+
+@keyframes gg5 {
+    from {
+        left: 1.5rem;
+        bottom: 4.08rem;
+    }
+
+    to {
+        left: 1.05rem;
+        bottom: 4.35rem;
+    }
+}
+
+@keyframes gg6 {
+    from {
+        left: 1.05rem;
+        bottom: 4.35rem;
+    }
+
+    to {
+        left: 4rem;
+        bottom: 6rem;
+    }
+}
+
+@keyframes gg7 {
+    from {
+        left: 4rem;
+        bottom: 6rem;
+    }
+
+    to {
+        left: 4.9rem;
+        bottom: 4.85rem;
+    }
+}
+
+@keyframes gg8 {
+    from {
+        left: 4.9rem;
+        bottom: 4.85rem;
+    }
+
+    to {
+        left: 4rem;
+        bottom: 4.3rem;
+    }
+}
+
+@keyframes gg9 {
+    from {
+        left: 4rem;
+        bottom: 4.3rem;
+    }
+
+    to {
+        left: 5.6rem;
+        bottom: 3.45rem;
+    }
+}
+
+@keyframes gg10 {
+    from {
+        left: 5.6rem;
+        bottom: 3.45rem;
+    }
+
+    to {
+        left: 4rem;
+
+        bottom: 2.3rem;
+    }
+}
+
+@keyframes gg11 {
+    from {
+        left: 4rem;
+
+        bottom: 2.3rem;
+    }
+
+    to {
+        left: 3.22rem;
+        bottom: 3rem;
+    }
+}
